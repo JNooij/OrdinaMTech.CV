@@ -11,6 +11,10 @@
                 <span class="fa fa-star {{kennisItem.kennisniveau >= 4 ? ' checked' : ''}}"></span>
                 <span class="fa fa-star {{kennisItem.kennisniveau >= 5 ? ' checked' : ''}}"></span>
             </div>
+            <div style="display: flex; flex-direction: column;">
+                <span class="text-primary">Jaren: {{kennisItem.jaren}}</span>
+                <span class="text-primary">Niveau: {{ getNiveauTekst(kennisItem.kennisniveau) }}</span>
+            </div>
         </div>
 
     </div>

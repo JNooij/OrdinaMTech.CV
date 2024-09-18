@@ -60,9 +60,15 @@ namespace OrdinaMTech.Cv.Api.Controllers
         public IActionResult Get()
         {
             var result = _cvService.GetCv();
+
             if (result == null)
                 return NotFound();
-
+            
+            if (result.Werkervaring != null)
+            {
+                result.Werkervaring = result.Werkervaring.OrderByDescending(w => w.DatumVan).ToList();
+            }
+            
             return Ok(result);
         }
 

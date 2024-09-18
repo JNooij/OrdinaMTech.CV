@@ -14,6 +14,11 @@
                         <span class=@("fa fa-star " + ((int)kennisitem.Kennisniveau >= 4 ? " checked" : "" ))></span>
                         <span class=@("fa fa-star " + ((int)kennisitem.Kennisniveau >= 5 ? " checked" : "" ))></span>
                     </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <span class="text-primary">Jaren: @kennisitem.Jaren</span>
+                        <span class="text-primary">Niveau: @kennisitem.Kennisniveau</span>
+                        
+                    </div>
                 </div>
             }
         </div>
